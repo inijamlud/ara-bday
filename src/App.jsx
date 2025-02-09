@@ -62,10 +62,7 @@ function App() {
     </div>
    </div>
 
-   <hr
-    width={800}
-    className="mx-auto border-t-2 border-gray-200 mb-24"
-   />
+   <hr className="mx-auto w-[200px] md:w-[900px] border-t-2 border-gray-200 mb-24" />
 
    {/* Artist Section  */}
    <div className="flex flex-col text-center items-center container m-auto px-10 my-12">
@@ -80,11 +77,11 @@ function App() {
      luar biasanya dirimu. ✨
     </p>
 
-    <h2 className="font-display font-semibold italic text-2xl md:mx-32 my-40">
+    <h2 className="font-display font-semibold italic text-2xl md:mx-32 my-56">
      Misi... Artis mo lewat...
     </h2>
 
-    <div className="flex flex-col space-x-12 md:flex-row my-20">
+    <div className="flex flex-col gap-16 md:flex-row my-20">
      <div className="img-frame rotate-5">
       <img src={fr1} alt="" width={360} className="" />
      </div>
@@ -161,10 +158,10 @@ function App() {
    </div>
 
    {/* Black section */}
-   <div className="font-display bg-gray-950 rounded-3xl h-200 text-gray-50 text-3xl flex flex-col items-center w-fit">
-    <div className="mx-auto px-80 text-center">
+   <div className="font-display bg-gray-950 rounded-3xl text-gray-50 text-3xl flex flex-col items-center w-fit">
+    <div className="mx-auto px-80 text-center gap-96 flex flex-col">
      <h1>
-      Ara sayang, mungkin setidaknya... semoga ini bikin
+      Ara sayang, mungkin sedikitnya... semoga ini bikin
       kamu sedikit bahagia
      </h1>
      <h1>
