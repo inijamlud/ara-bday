@@ -1,4 +1,7 @@
 import "./App.css";
+import fr1 from "./assets/fr (1).jpg";
+import fr2 from "./assets/fr (2).jpg";
+import fr3 from "./assets/fr.jpg";
 import pp from "./assets/pp.mp4";
 import my from "./assets/react.svg";
 
@@ -24,7 +27,7 @@ function App() {
     <div className="h-auto flex flex-col justify-center items-center py-20">
      <video
       src={pp}
-      width={200}
+      width={300}
       autoPlay
       muted
       loop
@@ -41,11 +44,12 @@ function App() {
      </p>
 
      <p className="italic text-xs text-gray-500">
-      ( kayanya lebih mantep kalo kamu buka pake laptopp )
+      ( kayanya lebih mantep kalo kamu buka pake laptopp
+      hihiiii )
      </p>
 
      <div className="m-8">
-      <ul className="flex flex-col md:flex-row space-x-2">
+      <ul className="flex flex-col md:flex-row gap-2">
        <li className="pills bg-[#EFF4FD]">
         sipaling mentor🫡
        </li>
@@ -65,43 +69,30 @@ function App() {
 
    {/* Artist Section  */}
    <div className="flex flex-col text-center items-center container m-auto px-10 my-12">
-    <p>
+    <p className="md:w-1/2">
      Selamat dateng di sudut kecil internet yang dibikin
-     khusus buat kamu~ Dari tak terhitungnya luas internet
-     yang ada, layak untuk simpan kisah kamu yang tetap
-     hidup, berkembang, jahit perjalanan, terutama with me
-     (assoyy). Hari ini sepenuhnya tentangmu—senyummu,
-     cahayamu, dan betapa luar biasanya dirimu. ✨
+     khusus buat kamu~ <br />
+     Dari tak terhitungnya luas internet yang ada, layak
+     untuk simpan kisah kamu yang tetap hidup, berkembang,
+     jahit perjalanan, terutama with me{" "}
+     <span className="italic">(assoyy)</span>. Hari ini
+     sepenuhnya tentangmu— senyummu, cahayamu, dan betapa
+     luar biasanya dirimu. ✨
     </p>
 
-    <h2 className="font-display font-semibold italic text-2xl">
-     Artis mo lewat...
+    <h2 className="font-display font-semibold italic text-2xl md:mx-32 my-40">
+     Misi... Artis mo lewat...
     </h2>
 
-    <div className="flex flex-col space-x-12 md:flex-row s">
-     <div className="bg-amber-300 px-5 pt-5 pb-10 shadow-2xl rotate-5">
-      <img
-       src={my}
-       alt=""
-       width={200}
-       className="bg-amber-700"
-      />
+    <div className="flex flex-col space-x-12 md:flex-row my-20">
+     <div className="img-frame rotate-5">
+      <img src={fr1} alt="" width={360} className="" />
      </div>
-     <div className="bg-amber-300 px-5 pt-5 pb-10 shadow-2xl">
-      <img
-       src={my}
-       alt=""
-       width={200}
-       className="bg-amber-700"
-      />
+     <div className="img-frame">
+      <img src={fr2} alt="" width={360} className="" />
      </div>
-     <div className="bg-amber-300 px-5 pt-5 pb-10 shadow-2xl -rotate-5">
-      <img
-       src={my}
-       alt=""
-       width={200}
-       className="bg-amber-700"
-      />
+     <div className="img-frame -rotate-5">
+      <img src={fr3} alt="" width={360} className="" />
      </div>
     </div>
    </div>
