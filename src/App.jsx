@@ -1,9 +1,10 @@
 import "./App.css";
+import pp from "./assets/pp.mp4";
 import my from "./assets/react.svg";
 
 function App() {
  return (
-  <div className="font-sans">
+  <div className="font-sans text-center">
    {/* Navigation Bar */}
    <nav className="py-8 justify-center container m-auto px-10">
     <ul className="font-display flex justify-between items-center">
@@ -21,19 +22,20 @@ function App() {
    {/* Hero Section */}
    <div className="h-auto w-auto justify-center container m-auto px-10">
     <div className="h-auto flex flex-col justify-center items-center py-20">
-     <img
-      src={my}
+     <video
+      src={pp}
       width={200}
-      height={200}
-      alt=""
-      className=""
-     />
+      autoPlay
+      muted
+      loop
+      className="rounded-full"
+     ></video>
 
-     <h1 className="font-display text-5xl font-bold">
-      Happy Birthday, Flo!
+     <h1 className="font-display text-5xl font-bold my-12">
+      Happy Birthday, Ara!
      </h1>
 
-     <p>
+     <p className="mb-2">
       selebrasi dikit taun ini supaya bisa lebih dar, der,
       dor dan makin ready menjadi dewasa🤝
      </p>
@@ -42,13 +44,13 @@ function App() {
       ( kayanya lebih mantep kalo kamu buka pake laptopp )
      </p>
 
-     <div>
-      <ul className="flex space-x-8">
-       <li className="pills bg-[#FBE6E6]">
+     <div className="m-8">
+      <ul className="flex flex-col md:flex-row space-x-2">
+       <li className="pills bg-[#EFF4FD]">
         sipaling mentor🫡
        </li>
-       <li className="pills bg-amber-200">cwek pikmi 😋</li>
-       <li className="pills bg-amber-200">
+       <li className="pills bg-[#FBE6E6]">cwek pikmi 😋</li>
+       <li className="pills bg-[#FFF5D8]">
         jamet lovely💖
        </li>
       </ul>
@@ -56,8 +58,13 @@ function App() {
     </div>
    </div>
 
+   <hr
+    width={800}
+    className="mx-auto border-t-2 border-gray-200 mb-24"
+   />
+
    {/* Artist Section  */}
-   <div className="flex flex-col text-center items-center container m-auto px-10">
+   <div className="flex flex-col text-center items-center container m-auto px-10 my-12">
     <p>
      Selamat dateng di sudut kecil internet yang dibikin
      khusus buat kamu~ Dari tak terhitungnya luas internet
