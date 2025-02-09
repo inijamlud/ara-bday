@@ -5,3 +5,11 @@
 
  --font-display: "Bricolage Grotesque", serif;
 }
+
+.custom-container {
+ @apply container m-auto px-10;
+}
+
+.pills {
+ @apply px-4 py-2 rounded-4xl;
+}
