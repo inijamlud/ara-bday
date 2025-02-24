@@ -1,14 +1,52 @@
+import { useRef } from "react";
 import "./App.css";
 import fr1 from "./assets/fr (1).jpg";
 import fr2 from "./assets/fr (2).jpg";
 import fr3 from "./assets/fr.jpg";
+import bgImage from "./assets/lg.jpg";
 import pp from "./assets/pp.mp4";
 import my from "./assets/react.svg";
 
 function App() {
+ const sectionRef = useRef(null);
+
+ //  useEffect(() => {
+ //   const scrollToTarget = () => {
+ //    const targetPosition = sectionRef.current.offsetTop;
+ //    let currentPosition = window.scrollY;
+ //    const step = (targetPosition - currentPosition) / 7550;
+
+ //    const smoothScroll = () => {
+ //     if (Math.abs(currentPosition - targetPosition) > 1) {
+ //      currentPosition += step;
+ //      window.scrollTo(0, currentPosition);
+ //      requestAnimationFrame(smoothScroll);
+ //     } else {
+ //      window.scrollTo(0, targetPosition);
+ //     }
+ //    };
+
+ //    smoothScroll();
+ //   };
+
+ //   setTimeout(scrollToTarget, 3000);
+ //  }, []);
+
  return (
-  <div className="font-sans text-center">
+  <div className="font-sans text-center md:text-left">
    {/* Navigation Bar */}
+
+   {/* Hidden music */}
+   <iframe
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/sF0HrA5X8dw?autoplay=1&loop=1&playlist=sF0HrA5X8dw&start=15"
+    frameBorder="0"
+    allow="autoplay"
+    allowFullScreen
+    title="Background Music"
+   ></iframe>
+
    <nav className="py-8 justify-center container m-auto px-10">
     <ul className="font-display flex justify-between items-center">
      <a href="/">
@@ -95,25 +133,35 @@ function App() {
    </div>
 
    {/* Banner */}
-   <div className="bg-violet-500 h-[600px] w-full">
-    <img src="" alt="" />
-    <div className="container m-auto px-10">
-     <h2 className="font-display text-2xl font-bold">
+   <div
+    className="sm:h-[800px] h-[900px] w-full bg-cover bg-[position:-740px_center] lg:bg-center mt-60 mb-20 relative flex items-end justify-start"
+    style={{ backgroundImage: `url(${bgImage})` }}
+   >
+    <div className="absolute inset-0 bg-slate-800/30 z-0"></div>
+
+    <div className="container mx-auto px-10 text-white relative z-10 sm:mb-20 mb-10">
+     <h2 className="font-display sm:text-4xl font-bold text-2xl">
       Lagipula, hidup akan berakhir, kan?
      </h2>
-     <p>
-      Seperti kata Hindia, impianku halnya "Smoga hidup kita
-      trus begini-gini saja, Walau sungai meluap dan kurs
-      tak masuk logika. Smoga kita mencintai apa adanya,
-      Walau katanya skarang ku bisa masuk penjara". Atau
-      seperti kata sheila on 7, "Segenap cinta yang kau
-      berikan, Tak akan hilang ditelan zaman. Kau yang
-      terbaik, Memori baik", se-bersyukurnya aku kenal sama
-      kamu, jalani hari dengan ditemani manusia baru,
-      belajar banyak hal, dan kamu akan kuusahakan selalu
-      untuk jadi memori terbaikku. Kehadiran kamu, jadi
-      warna baru di hidup aku. Mari menikmati hidup lebih
-      lama, tetap bersama dan saling membersamai.
+     <p className="w-full max-w-6xl sm:text-lg text-sm mt-6">
+      Seperti kata Hindia, impianku halnya{" "}
+      <i>
+       "Smoga hidup kita trus begini-gini saja, Walau sungai
+       meluap dan kurs tak masuk logika. Smoga kita
+       mencintai apa adanya, Walau katanya skarang ku bisa
+       masuk penjara".
+      </i>{" "}
+      Atau seperti kata sheila on 7,{" "}
+      <i>
+       "Segenap cinta yang kau berikan, Tak akan hilang
+       ditelan zaman. Kau yang terbaik, Memori baik",
+      </i>{" "}
+      se-bersyukurnya aku kenal sama kamu, jalani hari
+      dengan ditemani manusia baru, belajar banyak hal, dan
+      kamu akan kuusahakan selalu untuk jadi memori
+      terbaikku. Kehadiran kamu, jadi warna baru di hidup
+      aku. Mari menikmati hidup lebih lama, tetap bersama
+      dan saling membersamai.
      </p>
     </div>
    </div>
@@ -158,7 +206,10 @@ function App() {
    </div>
 
    {/* Black section */}
-   <div className="font-display bg-gray-950 rounded-3xl text-gray-50 text-3xl flex flex-col items-center w-fit">
+   <div
+    ref={sectionRef}
+    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-3xl flex flex-col items-center w-fit"
+   >
     <div className="mx-auto px-80 text-center gap-96 flex flex-col">
      <h1>
       Ara sayang, mungkin sedikitnya... semoga ini bikin

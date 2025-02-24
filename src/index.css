@@ -17,3 +17,9 @@
 .img-frame {
  @apply bg-gray-50 px-5 pt-5 pb-10 shadow-2xl;
 }
+
+.bg-custom {
+ background-image: url("/assets/lg.jpg");
+ background-size: cover;
+ background-position: center;
+}
