@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import "./App.css";
+import endBg from "./assets/end-bg.jpg";
 import fr1 from "./assets/fr (1).jpg";
 import fr2 from "./assets/fr (2).jpg";
 import fr3 from "./assets/fr (3).jpg";
@@ -168,7 +169,7 @@ function App() {
    </div>
 
    {/* Wishes */}
-   <div className="text-right my-42 py-48 custom-container">
+   <div className="text-right custom-container pt-40">
     {/* Flex Container */}
     <div className="flex flex-col md:flex-row gap-20 items-start justify-end">
      <h2 className="sm:text-lg text-xl max-w-xl tracking-wide leading-normal ml-auto">
@@ -217,10 +218,10 @@ function App() {
    {/* Black section */}
    <div
     ref={sectionRef}
-    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-lg sm:text-2xl md:text-3xl flex flex-col items-center my-96 mx-auto p-20 sm:p-80 md:p-80 lg:p-80 w-full"
+    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-lg sm:text-2xl md:text-3xl flex flex-col items-center mt-80 mx-auto p-20 sm:p-80 md:p-80 lg:p-80 w-full relative z-10 top-10"
    >
-    <div className="text-center flex flex-col space-y-96 sm:space-y-72 md:-space-y-80 lg:space-y-96 py-72 max-w-xl">
-     <h1 className="mt-60">
+    <div className="text-center flex flex-col space-y-96 sm:space-y-72 md:-space-y-80 lg:space-y-96 py-62 max-w-xl">
+     <h1 className="mt-12">
       Ara sayangg, mungkin sedikitnya... semoga ini bikin
       kamu sedikit bahagia
      </h1>
@@ -261,10 +262,25 @@ function App() {
      <p>~💐~</p>
      <h1 className="break-words">
       loveeeeeeeeeeeeeeeeeeee youuuuuuuuuuuuuuuuuuuuu
-      sooooooooooooooooooooooooo muchhhhhhhhhhhhhhhhhhhh
-      lee😍😍😍❤️❤️❤️❤️❤️😘😘😘
+      sooooooooooooooooooooooooo muchhhhhhhhhhhhhhhhhhhh lee
+      <br />
+      😍😍😍❤️❤️❤️❤️❤️😘😘😘
      </h1>
     </div>
+   </div>
+
+   <div
+    className="bg-slate-900 items-center font-display font-bold sm:text-5xl text-4xl flex flex-col justify-center h-240 text-center sm:bg-cover bg-contain relative z-0 bg-[position:center] lg:bg-center"
+    style={{ backgroundImage: `url(${endBg})` }}
+   >
+    <div className="absolute inset-0 bg-slate-800/30 z-0"></div>
+    <h1 className="mt-20 text-white">
+     Happy 23th birthday, Ara Sayang!
+    </h1>
+
+    <p className="text-sm mt-28 text-slate-100">
+     love you, ra❤️
+    </p>
    </div>
   </div>
  );
