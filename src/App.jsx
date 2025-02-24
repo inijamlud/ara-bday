@@ -217,43 +217,52 @@ function App() {
    {/* Black section */}
    <div
     ref={sectionRef}
-    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-3xl flex flex-col items- w-fit"
+    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-lg sm:text-2xl md:text-3xl flex flex-col items-center my-96 mx-auto p-20 sm:p-80 md:p-80 lg:p-80 w-full"
    >
-    <div className="mx-auto px-80 text-center gap-96 flex flex-col">
-     <h1>
-      Ara sayang, mungkin sedikitnya... semoga ini bikin
+    <div className="text-center flex flex-col space-y-96 sm:space-y-72 md:-space-y-80 lg:space-y-96 py-72 max-w-xl">
+     <h1 className="mt-60">
+      Ara sayangg, mungkin sedikitnya... semoga ini bikin
       kamu sedikit bahagia
      </h1>
-     <h1>
+     <p>~💐~</p>
+     <h1 className="mt-60">
       Perlu kamu inget, kalo kamu layak buat dicintai
       sebegitunya, sebagaimana kamu melakukan itu padaku..
      </h1>
-     <h1>
+     <p>~💐~</p>
+     <h1 className="mt-60">
       Kamu juga sangat berhak bahagiaaahahahahahahahha
      </h1>
-     <h1>
+     <p>~💐~</p>
+     <h1 className="mt-60">
       ga banyak yg bisa aku kasih untuk kamu, the cutest
-      person i've ever met ʚ♡ɞ
+      person I've ever met ʚ♡ɞ
      </h1>
-     <h1>sekarang tugasku hanya mendoakan sepenuh hati</h1>
-     <h1>
+     <p>~💐~</p>
+     <h1 className="mt-60">
+      sekarang tugasku hanya mendoakan kamu dengan sepenuh
+      hati
+     </h1>
+     <p>~💐~</p>
+     <h1 className="mt-60">
       coba kamu berdoa buat diri sendiri.. Pejamkan matamu,
       ya..
      </h1>
-     <h1>
+     <p>~💐~</p>
+     <h1 className="mt-60">
       Aamiin yarobbal alaminnn... Semoga doa nya terkabul,
       dikabulkan secepetnya sama Allah.
      </h1>
-
-     <h1>terakhir, ubur ubur ikan lelee~</h1>
-     <h1>
-      loveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-      youuuuuuuuuuuuuuuuuuuuu
-      soooooooooooooooooooooooooooo000000000000000000000000000000o000000ooooo
-      oooooooooooooo00000000000000000000oooo
-      oooooooooooooooooooooooooo0000000000000000000000000000000000000oooooo
-      muchhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-      lee❤️❤️❤️❤️❤️❤️❤️❤️😍😍😍😘😘😘
+     <p>~💐~</p>
+     <h1 className="mt-60">
+      karena dikejar deadline,
+      <br /> terakhir, ubur ubur ikan lelee~
+     </h1>
+     <p>~💐~</p>
+     <h1 className="break-words">
+      loveeeeeeeeeeeeeeeeeeee youuuuuuuuuuuuuuuuuuuuu
+      sooooooooooooooooooooooooo muchhhhhhhhhhhhhhhhhhhh
+      lee😍😍😍❤️❤️❤️❤️❤️😘😘😘
      </h1>
     </div>
    </div>
