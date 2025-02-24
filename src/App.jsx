@@ -2,10 +2,11 @@ import { useRef } from "react";
 import "./App.css";
 import fr1 from "./assets/fr (1).jpg";
 import fr2 from "./assets/fr (2).jpg";
-import fr3 from "./assets/fr.jpg";
+import fr3 from "./assets/fr (3).jpg";
+import fr from "./assets/fr.jpg";
 import bgImage from "./assets/lg.jpg";
+import po from "./assets/po.jpg";
 import pp from "./assets/pp.mp4";
-import my from "./assets/react.svg";
 
 function App() {
  const sectionRef = useRef(null);
@@ -127,7 +128,7 @@ function App() {
       <img src={fr2} alt="" width={360} className="" />
      </div>
      <div className="img-frame -rotate-5">
-      <img src={fr3} alt="" width={360} className="" />
+      <img src={fr} alt="" width={360} className="" />
      </div>
     </div>
    </div>
@@ -167,22 +168,26 @@ function App() {
    </div>
 
    {/* Wishes */}
-   <div className="custom-container">
-    <h2 className="text-2xl">
-     Semoga hidup kamu di tahun yang baru ini bisa lebih
-     baik dari yang sebelumnya, bisa tercapai tujuan-tujuan
-     yang kamu impikan. Doaku selalu sama, sehat selalu dan
-     berkah selalu. Semoga selalu ada hal baik yang dateng
-     ke kamu setiap saat.
-    </h2>
-
-    <div className="flex">
-     <div>
-      <img src={my} width={300} height={300} alt="" />
-      <h3 className="font-display text-xl">
+   <div className="text-right my-42 py-48 custom-container">
+    {/* Flex Container */}
+    <div className="flex flex-col md:flex-row gap-20 items-start justify-end">
+     <h2 className="sm:text-lg text-xl max-w-xl tracking-wide leading-normal ml-auto">
+      Semoga hidup kamu di tahun yang baru ini bisa lebih
+      baik dari yang sebelumnya, bisa tercapai tujuan-tujuan
+      yang kamu impikan. Doaku selalu sama, sehat selalu dan
+      berkah selalu. Semoga selalu ada hal baik yang dateng
+      ke kamu setiap saat.
+     </h2>
+     {/* Card 1 */}
+     <div className="max-w-sm text-left">
+      <img
+       src={fr3}
+       className="rounded-lg shadow-lg mb-14"
+      />
+      <h3 className="font-display text-xl font-semibold mb-2">
        Berkah rezeki
       </h3>
-      <p>
+      <p className="text-gray-600">
        Semoga hidup kamu di fase yang baru ini dipenuhi
        dengan rezeki yang melimpah ya, banyak lagi berkah.
        Bisa bantu menaikkan derajat orangtua, keluarga dan
@@ -190,12 +195,16 @@ function App() {
       </p>
      </div>
 
-     <div>
-      <img src={my} width={300} height={200} alt="" />
-      <h3 className="font-display text-xl">
+     {/* Card 2 */}
+     <div className="max-w-sm text-left">
+      <img
+       src={po}
+       className="mx-auto rounded-lg shadow-lg mb-14"
+      />
+      <h3 className="font-display text-xl mb-2 font-semibold">
        Sehat walafiat
       </h3>
-      <p>
+      <p className="text-gray-600">
        Satu lagi yang nggak kalah penting, sehat lahir lagi
        batin. Semoga tidak lagi sering mimisan yaa, atur
        lagi aktivitasnya ya bunikk.. sehat nomor utama biar
@@ -208,7 +217,7 @@ function App() {
    {/* Black section */}
    <div
     ref={sectionRef}
-    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-3xl flex flex-col items-center w-fit"
+    className="font-display bg-gray-950 rounded-3xl text-gray-50 text-3xl flex flex-col items- w-fit"
    >
     <div className="mx-auto px-80 text-center gap-96 flex flex-col">
      <h1>
