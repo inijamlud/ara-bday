@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import "./App.css";
 import endBg from "./assets/end-bg.jpg";
@@ -8,6 +9,7 @@ import fr from "./assets/fr.jpg";
 import bgImage from "./assets/lg.jpg";
 import po from "./assets/po.jpg";
 import pp from "./assets/pp.mp4";
+import audioFile from "./assets/so7-best-moment.mp3";
 
 function App() {
  const sectionRef = useRef(null);
@@ -38,16 +40,9 @@ function App() {
   <div className="font-sans text-center md:text-left">
    {/* Navigation Bar */}
 
-   {/* Hidden music */}
-   <iframe
-    width="0"
-    height="0"
-    src="https://www.youtube.com/embed/sF0HrA5X8dw?autoplay=1&loop=1&playlist=sF0HrA5X8dw&start=15"
-    frameBorder="0"
-    allow="autoplay"
-    allowFullScreen
-    title="Background Music"
-   ></iframe>
+   <audio autoPlay loop hidden>
+    <source src={audioFile} type="audio/mpeg" />
+   </audio>
 
    <nav className="py-8 justify-center container m-auto px-10">
     <ul className="font-display flex justify-between items-center">
@@ -63,7 +58,12 @@ function App() {
    </nav>
 
    {/* Hero Section */}
-   <div className="h-auto w-auto justify-center container m-auto px-10">
+   <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="h-auto w-auto justify-center container m-auto px-10"
+   >
     <div className="h-auto flex flex-col justify-center items-center py-20">
      <video
       src={pp}
@@ -100,12 +100,17 @@ function App() {
       </ul>
      </div>
     </div>
-   </div>
+   </motion.div>
 
    <hr className="mx-auto w-[200px] md:w-[900px] border-t-2 border-gray-200 mb-24" />
 
    {/* Artist Section  */}
-   <div className="flex flex-col text-center items-center container m-auto px-10 my-12">
+   <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="flex flex-col text-center items-center container m-auto px-10 my-12"
+   >
     <p className="md:w-1/2">
      Selamat dateng di sudut kecil internet yang dibikin
      khusus buat kamu~ <br />
@@ -123,16 +128,46 @@ function App() {
 
     <div className="flex flex-col gap-16 md:flex-row my-20">
      <div className="img-frame rotate-5">
-      <img src={fr1} alt="" width={360} className="" />
+      <motion.img
+       initial={{ opacity: 0, scale: 0.8 }}
+       animate={{ opacity: 1, scale: 1 }}
+       transition={{ duration: 1, delay: 0.5 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       viewport={{ once: true }}
+       src={fr1}
+       alt=""
+       width={360}
+       className=""
+      />
      </div>
      <div className="img-frame">
-      <img src={fr2} alt="" width={360} className="" />
+      <motion.img
+       initial={{ opacity: 0, scale: 0.8 }}
+       animate={{ opacity: 1, scale: 1 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       transition={{ duration: 1, delay: 0.5 }}
+       viewport={{ once: true }}
+       src={fr2}
+       alt=""
+       width={360}
+       className=""
+      />
      </div>
      <div className="img-frame -rotate-5">
-      <img src={fr} alt="" width={360} className="" />
+      <motion.img
+       initial={{ opacity: 0, scale: 0.8 }}
+       animate={{ opacity: 1, scale: 1 }}
+       transition={{ duration: 1, delay: 0.5 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       viewport={{ once: true }}
+       src={fr}
+       alt=""
+       width={360}
+       className=""
+      />
      </div>
     </div>
-   </div>
+   </motion.div>
 
    {/* Banner */}
    <div
